@@ -1,0 +1,22 @@
+<%@page import="mysql.data.StuDto"%>
+<%@page import="java.util.List"%>
+<%@page import="mysql.data.StuDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF8"
+    pageEncoding="UTF8"%>
+
+ <%
+ 	StuDao dao = new StuDao();
+ 	List<StuDto> list = dao.getAllDatas();
+ 	
+ 	StringBuffer sb = new StringBuffer();
+ 	sb.append("[");
+ 	for(StuDto dto:list)
+ 	{
+ 		sb.append("{\"num\":" + dto.getNum() + ",");
+ 		sb.append("{\"name\":" + dto.getName() + "\",");
+ 		sb.append("},");
+ 	}
+ 	sb.append("]");
+ %>
+ <%=sb.toString()%> 
+    

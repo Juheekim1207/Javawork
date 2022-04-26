@@ -1,0 +1,43 @@
+package mysql.data;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ShopDao {
+	DbConnect db = new DbConnect();
+	
+	//insert
+	public void shopInsert(ShopDto dto)
+	{
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = "insert into shop (sangpum, photo, price, color, cnt, ipgoday) values (?,?,?,?,?,?)'";
+	
+		conn = db.getConnection();
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			//바인딩
+			pstmt.setString(1, dto.getSangpum());
+			pstmt.setString(2, dto.getPhoto());
+			pstmt.setInt(3, dto.getPrice());
+			pstmt.setString(4, dto.getColor());
+			pstmt.setInt(5, dto.getCnt());
+			pstmt.setString(6, dto.getIpgoday());
+			
+			//실행
+			pstmt.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbCLose(pstmt, conn);
+		}
+		
+	}
+
+}

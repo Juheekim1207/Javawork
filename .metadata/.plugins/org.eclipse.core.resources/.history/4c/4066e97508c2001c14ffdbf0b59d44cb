@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF8"
+    pageEncoding="UTF8"%>
+
+<%
+	//엔코딩
+	request.setCharacterEncoding("UTF-8");
+	
+	//데이터 읽기
+	String writer = request.getParameter("writer");
+	String pass = request.getParameter("pass");
+	String avata = request.getParameter("avata");
+	String content = request.getParameter("content");
+	String writeday = request.getParameter("writeday");
+
+	//dto에 넣기
+	
+	//dao 선언
+	
+	//insert 메서드 호출
+	
+
+%>

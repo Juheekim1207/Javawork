@@ -1,0 +1,143 @@
+<%@ page language="java" contentType="text/html; charset=UTF8"
+    pageEncoding="UTF8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Brush+Script&display=swap" rel="stylesheet">  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+	div.detail{
+		margin-top: 100px;
+		margin-left: 200px;
+		font-size: 25px;
+		font-family: 'Jua';
+	}
+</style>
+<script type="text/javascript">
+	$(function() {
+		init(); //처음 시작시 dto데이터 넣어주기
+		
+		//메인페이지로 가는 이벤트
+		$("#btnmain").click(function() {
+			history.back(); //이전 페이지로 이동
+			//location.href="ShopJson.jsp"
+			
+		});
+		
+		$("#btndelete").click(function(){
+			var ans = confirm("삭제하려면 [확인]버튼을 눌러주세요");
+			if(ans){
+				$.ajax({
+					type: "get",
+					dataType: "html",
+					url: "delete.jsp",
+					data: {"num":$("#num").val()},
+					success:function(){
+						alert("삭제되었습니다");
+						//Shopjson.html로 이동 
+						location.href="Shopjson.html";
+					}
+				});
+			}
+		}); 
+		
+		//수정 버튼
+		$("#btnupdate").click(function(){
+			 $("#myModal").modal();
+		});
+	});
+	
+	function init() {
+		$.ajax({
+			type: "get",
+			dataType: "json",
+			url: "DetailJson.jsp",
+			data: {"num":$("#num").val()},
+			success:function(data){
+				console.log(data);
+				$("#photo").attr("src",data.photo);
+			 	$("#photo").css("border","4px solid gray");
+			 	$("#sangpum").text(data.sangpum);
+			 	$("#price").text(data.price + "원");
+			 	$("#color").text(data.color);
+			 	$("#color").css({
+			 		"background-color":data.color,
+			 		"float":"right"
+			 	});
+			 	$("#cnt").text(data.cnt + "개");
+			 	$("#ipgoday").text(data.ipgoday);		
+			}
+		});
+	}
+</script>
+</head>
+<%
+	String num = request.getParameter("num");
+%>
+
+<body>
+<input type="hidden" id="num" value="<%=num%>">
+<div class="detail">
+	<table class="table table-bordered" style="width: 600px;" >
+	<caption><h1>상품 상세 페이지</h1></caption>
+		<tr>
+			<td width="300">
+				<img src="" width="300" height="400" id="photo">
+			</td>
+			<td>
+				<h2>상품명 : <span id="sangpum"></span></h2>
+				<h2>색 상 : <div id="color"></div></h2>
+				<h2>가 격 : <span id="price"></span></h2>
+				<h2>수 량 : <span id="cnt"></span></h2>
+				<h2>입고일 : <span id="ipgoday"></span></h2>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<button type="button" class="btn btn-success"
+				style="width: 120px;" id="btnmain">메인</button>
+				
+				<button type="button" class="btn btn-info"
+				style="width: 120px;" id="btnupdate" num=<%=num%>>수정</button>
+				
+				<button type="button" class="btn btn-danger"
+				style="width: 120px;" id="btndelete" num=<%=num%>>삭제</button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!--수정 다이얼로그 Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">상품수정</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

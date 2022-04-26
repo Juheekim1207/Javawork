@@ -1,0 +1,16 @@
+package mysql.data;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class GuestDao {
+	DbConnect db = new DbConnect();
+	
+	//insert
+	public void guestInsert(GuestDto dto)
+	{
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String sql = "insert into guest(writer,pass,avata,content,writeday) values (?,?,?,?,now())";
+	}
+}

@@ -1,0 +1,12 @@
+package mysql.data;
+
+public class GuestDto {
+	
+	private String num;
+	private String writer;
+	private String avata;
+	private String content;
+	private String pass;
+	private String writeday;
+
+}

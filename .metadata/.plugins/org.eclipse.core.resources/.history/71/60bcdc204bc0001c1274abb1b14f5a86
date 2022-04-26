@@ -1,0 +1,12 @@
+package mysql.data;
+
+public class ShopDto {
+	private String num;
+	private String sangpum;
+	private String photo;
+	private int price;
+	private String color;
+	private int cnt;
+	private String ipgoday;
+	
+}

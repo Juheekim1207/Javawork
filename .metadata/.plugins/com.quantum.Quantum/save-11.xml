@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="com.mysql.cj.jdbc.Driver" name="MySQL Connector/J" type="GENERIC" version="mysql-connector-java-8.0.22 (Revision: d64b664fa93e81296a377de031b8123a67e6def2)">
+			<jar fileName="/Users/gimjuhui/bitcamp_/database/mysql-connector-java-8.0.22.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="9.2.0.1.0">
+			<jar fileName="/Users/gimjuhui/bitcamp_/database/ojdbc14.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="Apache Derby Embedded JDBC Driver" type="DERBY" version="10.3.1.4 - (561794)">
+			<jar fileName="/Users/gimjuhui/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:/Users/gimjuhui/.p2/pool/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>/Users/gimjuhui/.p2/pool/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>oracle_bit901</name>
+			<username>bitcamp</username>
+			<password>a1234</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:xe</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>/Users/gimjuhui/bitcamp_/database/ojdbc14.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>BITCAMP</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>create sequence seq_bit nocache</queryString>
+				</query>
+				<query>
+					<queryString>drop table sawon</queryString>
+				</query>
+				<query>
+					<queryString>create table sawon (
+   num number(5) constraint sawon_pk_num primary key,
+   name varchar2(20),
+   buseo varchar2(20),
+   gibon number(10),
+   sudang number(10),
+   writeday date)</queryString>
+				</query>
+				<query>
+					<queryString>select *from sawon</queryString>
+				</query>
+				<query>
+					<queryString>select * from sawon</queryString>
+				</query>
+				<query>
+					<queryString>select num, name, buseo, gibon, sudang, gibon+sudang total, to_char(writeday,'yyyy-mm-dd hh:mi') from sawon</queryString>
+				</query>
+				<query>
+					<queryString>select num, name, buseo, gibon, sudang, gibon+sudang 
+	total, to_char(writeday,'yyyy-mm-dd hh:mi') from sawon
+	where name like '%이%'</queryString>
+				</query>
+				<query>
+					<queryString>select num, name, buseo, gibon, sudang, gibon+sudang total, to_char(writeday,'yyyy-mm-dd hh:mi') from sawon where name like '%이%'</queryString>
+				</query>
+				<query>
+					<queryString>select buseo, round(avg(gibon+sudang),0) pay from sawon group by buseo</queryString>
+				</query>
+				<query>
+					<queryString>select * from all_tables where table_name = '테이블명'</queryString>
+				</query>
+				<query>
+					<queryString>select * from all_tables where table_name = 'sawon'</queryString>
+				</query>
+				<query>
+					<queryString>select * from all_tables where table_name = 'bitcamp'</queryString>
+				</query>
+				<query>
+					<queryString>SELECT *  FROM all_tables  WHERE table_name = 'sawon'</queryString>
+				</query>
+				<query>
+					<queryString>grant select on sawon to bit901</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+		<bookmark>
+			<name>mysql_root</name>
+			<username>root</username>
+			<password>!wngml7750</password>
+			<prompt>false</prompt>
+			<connect>jdbc:mysql://localhost:3306/bitcamp?serverTimezone=Asia/Seoul</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>com.mysql.cj.jdbc.Driver</driver>
+			<type>GENERIC</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>/Users/gimjuhui/bitcamp_/database/mysql-connector-java-8.0.22.jar</driverLocation>
+			<Other_Schemas schemaRule="useSelected">
+				<schema>root@localhost</schema>
+			</Other_Schemas>
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>insert into stu (name, photo, hp, addr, writeday) values ('신민아',
+'../image/17.jpg','010-5688-5678','제주도 애월읍',now())</queryString>
+				</query>
+				<query>
+					<queryString>insert into stu (name, photo, hp, addr, writeday) values ('박보영',
+'../image/12.jpg','010-2222-5678','서울 영등포구',now())</queryString>
+				</query>
+				<query>
+					<queryString>insert into stu (name, photo, hp, addr, writeday) values ('설현',
+'../image/15.jpg','010-9999-5678','제주도 중문',now())</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM shop WHERE (num = 2)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM shop WHERE (num = 5)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM shop WHERE (num = 3)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM shop WHERE (num = 4)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM shop WHERE (num = 7)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM shop WHERE (num = 1)</queryString>
+				</query>
+				<query>
+					<queryString>create table guest (
+	num smallint auto_increment primary key,
+	writer varchar(20),
+	pass varchar(10),
+	avata varchar(10),
+	content varchar(2000),
+	writeday datetime)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 2) AND (writer = '') AND (pass = '') AND (avata = '1') AND (content = '&lt;NULL&gt;') AND (writeday = '2022-04-22 16:17:03')</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 5)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 4)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 3)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 2)</queryString>
+				</query>
+				<query>
+					<queryString>delete from guest</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 19)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 20)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 21)</queryString>
+				</query>
+				<query>
+					<queryString>DELETE FROM guest WHERE (num = 25)</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

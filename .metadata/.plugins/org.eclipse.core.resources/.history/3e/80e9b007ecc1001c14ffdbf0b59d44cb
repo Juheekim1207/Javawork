@@ -1,0 +1,17 @@
+package mysql.data;
+
+import java.sql.Timestamp;
+
+public class GuestDto {
+	private String num;
+	private String writer;
+	private String avata;
+	private String content;
+	private String pass;
+	private Timestamp writeday;
+	
+	public GuestDto() { //default생성자
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+127.0.0.1 - - [24/Apr/2022:22:35:27 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/day0422/GuestMain.jsp HTTP/1.1" 200 4003
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s1.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s2.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s3.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s4.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s5.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s6.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s7.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s8.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s9.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:27 +0900] "GET /WebProjectEx1/avata/s10.JPG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2022:22:35:28 +0900] "GET /favicon.ico HTTP/1.1" 404 818

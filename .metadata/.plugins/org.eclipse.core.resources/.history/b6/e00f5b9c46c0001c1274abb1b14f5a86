@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Brush+Script&display=swap" rel="stylesheet">  
+
+<style type="text/css">
+
+	body * {
+		font-family: 'Jua';
+		font-size: 20px;
+	}
+	
+	tr.title {
+		background-color: pink;
+		color: blue;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	
+</style>
+<script type="text/javascript">
+	$(function() {
+		list();//처음 로딩시 호출
+	});
+	
+	function list(){
+		$.ajax({
+			type:"get",
+			dataType:"json",
+			url:"stutojson.jsp",
+			success:function(data){
+				var s = "";
+				s += "<table class='table table-bodered'>";
+				s += "<tr><th>번호</th>";
+				s += "<th>이름</th><th>사진</th><th>핸드폰</th>"
+					 + "<th>주소</th><th>작성일</th></tr>";				
+			
+			 	$.each(data, function(i, n){
+			 		s += "<tr>";
+			 		s += "<td>" + n.num + "</td>";
+			 		s += "<td>" + n.name + "</td>";
+			 		s += "<td><img src='" + n.photo + "'></td>";
+			 		s += "<td>" + n.hp + "</td>";
+			 		s += "<td>" + n.addr + "</td>";
+			 		s += "<td>" + n.writeday + "</td>";
+			 		s += "</tr>";
+			}); 	
+			s += "</table>";
+			$(".stu").html(s);
+			}
+
+	});
+}
+</script>
+
+</head>
+<body>
+	<div class="stu">111</div>
+</body>
+</html>

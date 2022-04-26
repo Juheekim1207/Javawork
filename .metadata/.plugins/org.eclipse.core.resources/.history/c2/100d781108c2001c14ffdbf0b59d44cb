@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF8"
+    pageEncoding="UTF8"%>
+
+<%
+	//엔코딩
+	request.getCharacterEncoding("UTF-8");
+	
+	//데이터 읽기
+	
+	//dto에 넣기
+	
+	//dao 선언
+	
+	//insert 메서드 호출
+	
+
+%>

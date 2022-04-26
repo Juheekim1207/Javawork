@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Brush+Script&display=swap" rel="stylesheet">  
+
+<style>
+	div.title{
+		border: 1px solid gray;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		font-size: 30px;
+		font-family: 'Jua';
+	}
+</style>
+</head>
+<body>
+<div class="title">
+	Shop Design
+</div>
+<div class="inform">
+	<b>상품 등록</b>
+</div>
+<div class="list">
+	<b>상품 목록</b>
+</div>
+</body>
+</html>

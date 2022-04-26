@@ -1,0 +1,34 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF8"
+    pageEncoding="UTF8"%>
+
+<%
+	//데이터 읽기
+	String sangpum = request.getParameter("sangpum");
+	String color = request.getParameter("color");
+	String ipgoday = request.getParameter("ipgoday");
+	String photo = request.getParameter("photo");
+	int cnt = Integer.parseInt(request.getParameter("cnt"));
+	int price;
+	
+			
+			try {
+				price = Integer.parseInt(request.getParameter("price"));
+				
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				price = 0;
+			} finally {
+				db.dbCLose(pstmt, conn);
+			}
+	
+
+	
+	//dto에 넣기
+	
+	//dao 선언
+	
+	//insert 메서드 호출
+
+
+%>

@@ -1,0 +1,12 @@
+package mysql.data;
+
+public class ShopDao {
+	DbConnect db = new DbConnect();
+	
+	//insert
+	public void shopInsert(ShopDto dto)
+	{
+		String sql = "insert into shop (sangpum, photo, price, color, cnt, ipgoday) values (?,?,?,?,?,?)'";
+	}
+
+}

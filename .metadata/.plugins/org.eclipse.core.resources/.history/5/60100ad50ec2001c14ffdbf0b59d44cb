@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF8"
+    pageEncoding="UTF8"%>
+
+<%
+	//json 배열타입으로 나오도록 코딩
+	//날짜를 년월일 시분까지 나오기
+
+%>
